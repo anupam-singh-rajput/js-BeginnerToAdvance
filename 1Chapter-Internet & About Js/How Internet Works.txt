@@ -1,0 +1,56 @@
+What is IP Address?
+IP address:
+IP address (Internet Protocol address) ek unique numerical label hota hai jo har device ko identify karne ke liye use hota hai internet par. Har connected device, jaise ki computers, smartphones, tablets, aur servers, ko ek unique IP address assign kiya jata hai taaki wo internet par communicate kar sakein.
+
+IP address, network communication ke liye bahut important hai. Jab aap kisi website ka URL enter karte hain apne web browser mein, browser DNS (Domain Name System) server se request karta hai domain name ke corresponding IP address ke liye. Phir DNS server us IP address ko browser ko provide karta hai aur browser us IP address ka use karta hai server tak pahunchne ke liye.
+
+IP address do prakar ke hote hain:
+
+IPv4 (Internet Protocol version 4):
+IPv4 address 32-bit ka hota hai aur generally four decimal numbers (0-255) se separated by dots ke form mein hota hai, jaise ki 192.168.0.1.
+
+IPv6 (Internet Protocol version 6):
+IPv6 address 128-bit ka hota hai, jo IPv4 ke addresses ki scarcity ko address karne ke liye introduce kiya gaya hai.
+IPv6 addresses hexadecimal digits (0-9 aur A-F) se separated by colons ke form mein hote hain, jaise ki 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+
+What is Data Packets?
+
+Data packets yani (small units of data) hote hain jo data ko transmit karne ke liye use kiye jaate hain computer networks mein. Jab bhi data ko internet ya kisi local network mein send kiya jaata hai, wo data packets mein divide kiya jaata hai.
+
+Har ek data packet mein kuch information hoti hai, jaise:
+
+1. Source aur Destination Addresses: Sender aur receiver ke addresses jo communication ka endpoint bataate hain.
+2. Data: Actual information ya message jo transmit kiya ja raha hai.
+3. Packet Number: Har packet ko unique identifier diya jata hai taaki receiver unhe sequence mein arrange kar sake.
+4. Header aur Footer Information: Additional information jaise ki error checking codes aur routing information.
+
+Jab data packets transmit hote hain, routers aur other network devices unhe sahi destination tak guide karte hain. Receiver ke pass jab packets pahunchte hain, unhe assemble kiya jaata hai takki original data ko restore kiya ja sake. Data packets ki yeh technique communication mein reliability aur efficiency ko improve karti hai.
+
+How communication happens  between the client and the server?
+1. URL Enter:
+- Jab User apne browser mein kisi website ka URL enter karta hai, jaise ki "www.google.com".
+
+2. DNS Lookup:
+- Browser, URL mein diye gaye domain name ko IP address mein convert karne ke liye DNS (Domain Name System) server ko call karta hai.
+- DNS server domain name ke corresponding IP address ko return karta hai.
+Browser us IP address ka use karta hai server tak pahunchne ke liye. Server aapke browser se IP address ke through connected hota hai. Jab aapka request server tak pahunchta hai, to server aapke browser ko webpage ya requested content send karta hai.
+
+3. Establishing Connection:
+- Browser, IP address ke through server se connection establish karta hai.
+Jab aap browser mein kisi website ka URL enter karte hain, tab browser HTTP (ya HTTPS) request generate karta hai. Is request mein server ko inform kiya jata hai ki user ka request aaya hai.
+
+4. Server Response:
+- Jab server user ke request ko receive karta hai, to uska server appropriate response generate karta hai. Response mein web page ka HTML code, saath mein CSS, JavaScript, aur other resources bhi hoti hain.
+
+5. Data Transfer:
+- Jab server response ko generate kar leta hai, usse multiple data packets mein divide karke user ke browser tak transmit kiya jata hai. Routers aur other network devices data packets ko sahi destination tak guide karte hain, taaki wo user ke device tak pahunch sakein.
+
+6. Rendering Web Page:
+Browser HTML code ko parse karke web page ko render karta hai. Iske baad, CSS styles apply kiye jaate hain, jisse webpage ka design aur appearance taiyar hota hai. Uske baad JavaScript code execute hota hai dynamic content aur functionality ke liye.
+
+7. Displaying Content:
+- Web page ka final version user ke device par display hota hai. - User web page ke content ko interact karke browse karta hai.
+
+
+ 
+ 

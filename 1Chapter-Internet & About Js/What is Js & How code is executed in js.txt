@@ -1,0 +1,33 @@
+What is script?
+1.	Script means a way of writing or a system of writing.
+2.	Scripting : A way of delivering instruction to a computer to perform some task.
+
+What is Javascript?
+Javascript is light-weight(less resource-intensive), interpreted, scripting language for web-application, it allow us to make the static HTML pages into interactive html pages.
+
+What does  it acutally means by light weight : when we say javascript is a light weight, it means it has several characteristics that make is less resource-intensive as compared to other programming languages.
+Characteristics:
+1.	Minimal Syntax : JS has minimal syntax which requires less or few lines code to accomplish tasks compared to more verbose languages.
+2.	Interpreted Language: JavaScript code is executed directly by the JavaScript engine in the web browser or other environments without the need for prior compilation.
+3.	Low Memory Footprint: JavaScript generally uses less memory, which makes it efficient to run on devices with limited resources.
+4.	Dynamic Typed: Js dynamic typed language which means variables datatype are determined at run time
+
+
+How code is executed ?
+1.	Source code: It the js code that we write. 
+2.	Parser: It converts the source code into an AST(Abstract Sytax Tree). AST is a tree representation of the code structure.
+3.	Interpreter:
+	Initial Execution: The interpreter, such as Ignition in V8, takes the AST and converts it into byte-code. A bytecode is an intermediate, lower-level representation of the code that is more efficient to execute than the original source code.
+	Execution of Bytecode: The interpreter executes the byte-code directly. This allows the code to run immediately without the need for ahead-of-time compilation.
+	Profiling: During execution, the interpreter also collects profiling data to identify hot code paths—sections of the code that are frequently executed(e.g. frequently called functions).  
+4.	Profiler: The profiler continuously monitors the execution of the byte-code to gather information about which parts of the code are executed often and how they perform.
+5.	JIT Compiler:
+Compilation: Based on the profiling data, the JIT compiler (e.g., TurboFan in V8) identifies hot code paths and compiles these sections of the byte code into optimized machine code.
+Optimization: The JIT compiler applies various optimizations during this compilation process to improve the performance of the code. This can involve inlining functions, optimizing loops, and eliminating redundant calculations.
+Replacement: The optimized machine code replaces the corresponding sections of the byte-code. When these hot paths are encountered again, the engine executes the optimized machine code instead of the interpreted byte-code.
+6.	 Execution: The machine code is then stored in memory and the CPU is directed to execute this code.
+
+In Very short.
+Our js code get converted in ast, then ast get converted into byte code, Then the byte code directly get executed, during execution profiler collects hot code, then the JIT  generates the optimized machine code for the hot code and then the section of hot code from the byte code gets replaced by optimized machine code. And machine code is executed by the CPU.
+
+
