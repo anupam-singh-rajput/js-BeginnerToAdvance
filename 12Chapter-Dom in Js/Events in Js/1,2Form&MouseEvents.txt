@@ -1,0 +1,236 @@
+<!-- DOM Manipulation:
+Comman Events:
+// Mouse events
+'click', 'dblclick', 'mousedown', 'mouseup', 'mouseenter:"jab aap ksi chiz pe click kare jaise inputbox"', 'mouseleave:"jab aap ksi chiz ke bahar click kare jaise inputbox ke bahar', 'mousemove', 'mouseover', 'mouseout'
+
+// Keyboard events
+'keydown', 'keypress', 'keyup'
+
+// Form events
+'submit', 'change', 'focus', 'blur', 'input'
+
+// Document events
+'DOMContentLoaded', 'load', 'resize', 'scroll'
+Sure! Let's go through the form and document events you mentioned, explain what they do in simple Hindi, and provide a simple example for each.
+
+### Form Events
+
+#### 1. `submit`
+- **Kya karta hai:** Form ke submit hone par event trigger hota hai.
+- **Example:** -->
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Submit Example</title>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" name="name" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Form submit ko rokne ke liye
+      alert('Form submitted!');
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 2. `change`
+- **Kya karta hai:** Input field ke value jab puri taraha se change kardoge and phir enter click karoge tab event trigger hoga.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Event Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Type something">
+
+  <script>
+    const input = document.getElementById('myInput');
+    input.addEventListener('change', function() {
+      alert('Input value changed!');
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 3. `focus`
+- **Kya karta hai:** Input field par focus aane par event trigger hota hai.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus Event Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Focus on me">
+
+  <script>
+    const input = document.getElementById('myInput');
+    input.addEventListener('focus', function() {
+      alert('Input is focused!');
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 4. `blur`
+- **Kya karta hai:** Input field se focus hatne par event trigger hota hai.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blur Event Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Focus and then blur">
+
+  <script>
+    const input = document.getElementById('myInput');
+    input.addEventListener('blur', function() {
+      alert('Input lost focus!');
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 5. `input`
+- **Kya karta hai:** Input field me kuch bhi type karte waqt event trigger hota hai means jaise hi kuch bhi type karoge event trigger hoga.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Event Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Type something">
+
+  <script>
+    const input = document.getElementById('myInput');
+    input.addEventListener('input', function() {
+      console.log('Input value:', input.value);
+    });
+  </script>
+</body>
+</html>
+```
+
+### Document Events
+
+#### 1. `DOMContentLoaded`
+- **Kya karta hai:** Document ke HTML content ke completely load hone par event trigger hota hai.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOMContentLoaded Event Example</title>
+</head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      alert('DOM fully loaded and parsed!');
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 2. `load`
+- **Kya karta hai:** Puri page (including images, styles, etc.) ke load hone par event trigger hota hai.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Load Event Example</title>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function() {
+      alert('Page fully loaded!');
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 3. `resize`
+- **Kya karta hai:** Window resize hone par event trigger hota hai.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resize Event Example</title>
+</head>
+<body>
+  <script>
+    window.addEventListener('resize', function() {
+      console.log('Window resized to', window.innerWidth, 'x', window.innerHeight);
+    });
+  </script>
+</body>
+</html>
+```
+
+#### 4. `scroll`
+- **Kya karta hai:** Page scroll hone par event trigger hota hai.
+- **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll Event Example</title>
+</head>
+<body style="height: 2000px;">
+  <script>
+    window.addEventListener('scroll', function() {
+      console.log('Page scrolled to', window.scrollY);
+    });
+  </script>
+</body>
+</html>
+```
+
+// These examples should help you understand how to use form and document events in JavaScript and what they do.
+// 1.Attribute:
+// 	1.getAttribute("attributeName");
+// 	2.setAttribute("attributeName","attributeValue");
+// 	3.removeAttribute("attributeName");
+// 	4.hasAttribute("attributeName");
+
+// 2.ClassList:
+// 	1.classList.add();
+// 	2.classList.remove();
+// 	3.classList.toggle();
+// 	4.classList.contains();
+
+// 3.Child:
+// 	1.appendChild(elementName);
+// 	2.removeChild(elementName);
+// 	3.replaceChild(newElement,oldElement);
+
