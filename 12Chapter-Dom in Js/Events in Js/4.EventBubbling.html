@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            width: 100%;
-            height: 100%;
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+       
         #div1{
             width: 60vw;
             height: 60vh;
@@ -34,30 +27,68 @@
        
     </style>
 </head>
-<body onclick="alert('Great GrandParent(Body) Receiving onclick Event')">
+<body">
+<!-- onclick="alert('Great GrandParent(Body) Receiving onclick Event') -->
     
-    <div id="div1" onclick="alert('GrandParent(Div1) Receiving Onlick Event')">
-        <div id="div2" onclick="alert('Parent(Div2) Receiving Onlick Event')">
-            <button onclick='alert("Button Clicked")'>Click me</button>
+    <div id="div1" ">
+        <div id="div2" ">
+            <button>Click me</button>
         </div>
     </div>
+
+    <!-- <p>
+        1.Event kya hota hai - To jab bhi apne browser window me kuch bhi karte ho kuch bhi means kuch bhi tab har us chiz ko
+        event bolte hai.( mouseover karna , click karna , scrolll karna anything...).
+        <br><br>
+        2.Event Bubbling -
+        Suppose ek div hai and aap uske andar ek onclick eventListener lagadete ho, ab jabhi aap us div ke andar kahi bhi click
+        karoge to eventListener chaljayega.Thike.
+        Ab aapne us div ke andar ek button create kardiya and us button par bhi onclick eventListener lagadiya to ab aap jab bhi
+        us button pe click karoge to us button ka eventListener chaljayega.Thike.
+        Lekin wo button bhi to div ke andar hai and jab bhi aap button pe click kar rahe ho to aap indirectly div pe bhi click
+        kar rahe ho, And div ke pass bhi ek same(onclick) eventListener hai.
+        To jab aap button pe click kar rahe ho to aap button or saath hi saath div pe click kar rahe ho and dono ke pass onclick
+        eventlistener hai, to dono ka hi eventlistener chaljayega lekin sabse phele button ka and phir div and isko ko hi event
+        bubbling bolte hai.
+        <br><br>
+        Event Bubbling means event propogate hota hai from child element se to the parent element.
+        And agar child element ke pass us particular event ka koi eventListener nahi hoga to javascript us event ka
+        eventListener child ke parent element me search karta hai.
+        <br><br>
+        
+        2-stopPropagation:
+        Agar aap chahte ho ki event child element ke bahar propogate hi na kare, to uske liye js hame ek function provide
+        karta hai stopPropagation().
+        stopPropagation() function ko aap jis element ke andar lagaoge ye event ko us element ke bahar jaane nahi dega.
+
+        3-Event Capturing - Means 1st parent ka eventListner run hoga phir child ka.
+        4-stopImmediatePropagtion - ye event ko propogate hone se or same event ko same element me bhi propogate hone se rokta hai.
+        5-preventDefault - Ye prevent Karta hai default nature of form and a tag means webpage ko refresh hone se prevent karta hai.
+    </p> -->
+
+    <script>
+        let div1 = document.querySelector('#div1');
+        let div2 = document.querySelector('#div2');
+        let btn = document.querySelector('button');
+
+        div1.addEventListener('click',() => {
+            alert('GrandParent(Div1) Receiving onclick Event');
+            // event.stopPropagation();
+            console.log(event.target.tagName);
+        },)
+        div2.addEventListener('click', function () {
+            alert('Parent(Div2) Receiving onclick Event');
+            // event.stopPropagation();
+        })
+        btn.addEventListener('click', function (e) {
+            alert('Button Clicked 1Times');
+            // e.stopPropagation();
+        })
+        btn.addEventListener('click', function (e) {
+                event.stopImmediatePropagation();
+                alert('Button Clicked 2Times');
+                // e.stopPropagation();
+        })
+    </script>
 </body>
 </html>
-
-1.Event kya hota hai - To jab bhi apne browser window me kuch bhi karte ho kuch bhi means kuch bhi tab har us chiz ko
-event bolte hai.( mouseover karna , click karna , scrolll karna anything...).
-
-2.Event Bubbling -
-Suppose ek div hai and aap uske andar ek onclick eventListener lagadete ho, ab jabhi aap us div ke andar kahi bhi click
-karoge to eventListener chaljayega.Thike.
-Ab aapne us div ke andar ek button create kardiya and us button par bhi onclick eventListener lagadiya to ab aap jab bhi
-us button pe click karoge to us button ka eventListener chaljayega.Thike.
-Lekin wo button bhi to div ke andar hai and jab bhi aap button pe click kar rahe ho to aap indirectly div pe bhi click
-kar rahe ho, And div ke pass bhi ek same(onclick) eventListener hai.
-To jab aap button pe click kar rahe ho to aap button or saath hi saath div pe click kar rahe ho and dono ke pass onclick
-eventlistener hai, to dono ka hi eventlistener chaljayega lekin sabse phele button ka and phir div and isko ko hi event
-bubbling bolte hai.
-
-Event Bubbling means event propogate hota hai from child element se to the parent element.
-And agar child element ke pass us particular event ka koi eventListener nahi hoga to javascript us event ka
-eventListener child ke parent element me search karta hai.

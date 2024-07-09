@@ -17,3 +17,35 @@ function emailTo(to) {
 let CompleteEmail =
   emailTo("anupam@gmail.com")("Namaste")("Hello kaise ho aap");
 console.log(CompleteEmail);
+
+//---------------------------------Real UseCase finding a user from users Document ------------------------------------------------------------
+let users = [
+  {
+    id: 1,
+    name: "Anupam",
+    email: "anupam@gmail.com",
+  },
+  {
+    id: 2,
+    name: "Anmol",
+    email: "anmol@gmail.com",
+  },
+  {
+    id: 3,
+    name: "Anshul",
+    email: "anshul@gmail.com",
+  },
+];
+
+function Users(usersArr) {
+  return function (name) {
+    return usersArr.find(function (ele) {
+      if (ele.name == name) {
+        return true;
+      }
+    });
+  };
+}
+
+let find = Users(users)("Anupam");
+console.log(find);
