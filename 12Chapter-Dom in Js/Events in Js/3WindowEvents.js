@@ -1,4 +1,4 @@
-//navigator object ke through apna geolocation findout kar sakte hai.
+//navigator object ke through hum apna and user ka geolocation findout kar sakte hai.
 
 //Location in js
 console.log(window.navigator.geolocation);

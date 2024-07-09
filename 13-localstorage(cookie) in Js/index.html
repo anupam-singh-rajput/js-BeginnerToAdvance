@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p>Hi my name is :<span><span>)</p>
+        <input type="text" placeholder="Enter your name">
+        <input type="submit" onclick="handle()">
+        <script>
+
+            // localStorage.setItem("key","Value");
+            // localStorage.getItem("key")
+            
+            function handle(){
+                let inputName = document.querySelector('input');
+                localStorage.setItem("name",inputName.value);
+                let name = localStorage.getItem("name");
+                console.log(name);
+                document.querySelector("span").innerText = name;
+            }
+            window.addEventListener("load",function(){
+                    console.log(localStorage.getItem("name"));
+                    document.querySelector("span").innerText = localStorage.getItem("name");
+                });
+        </script>
+</body>
+</html>
