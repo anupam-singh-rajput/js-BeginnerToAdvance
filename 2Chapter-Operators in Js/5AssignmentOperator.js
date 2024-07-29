@@ -1,4 +1,4 @@
-//1.Arithmetic Operator (=, +=, -=, *=, /=, %=):
+//5.Assignment Operator (=, +=, -=, *=, /=, %=):
 // = Assign.
 // += Add Then Assign.
 // -= Subtract Then Assign.
