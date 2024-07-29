@@ -20,7 +20,7 @@
 // let enteredmail = "anupam@gmail.com";
 // let enteredpass = "12345";
 
-// //If you just write return true so instead of returning a true element.
+// //If you just write return true so instead of returning a true.
 // //it will automactically return the current array element which meets the condition.
 // let result = arr.find(function(obj){
 //     if(obj.email == enteredmail && obj.password == enteredpass){
