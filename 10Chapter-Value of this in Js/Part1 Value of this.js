@@ -15,7 +15,8 @@ abcd();
     
 
 // Method Scope
-// Jab `this` ko ek method mein use kiya jata hai, toh woh method ke parent object ko refer karta hai, jaise aapne sahi tarah se kaha. Example:
+// Jab `this` ko ek method mein use kiya jata hai, toh woh method ke parent object ko refer karta hai.
+Example:
 
 var obj = {
     name: "Anupam",
